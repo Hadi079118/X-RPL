@@ -1,0 +1,15 @@
+PSEUDOCODE STUDI KASUS 3
+NAMA : MASHADI WIJAYA
+KELAS : X PPLG
+
+nilai
+if nilai >= 81 AND nilai <= 100 then
+	print (A)
+else if nilai >= 71 AND nilai <= 80 then
+	print (B)
+else if nilai >= 51 AND nilai <= 70 then
+	print (C)
+else if nilai >= 11 AND nilai <= 50 then
+	print (D)
+else print (E)
+endif

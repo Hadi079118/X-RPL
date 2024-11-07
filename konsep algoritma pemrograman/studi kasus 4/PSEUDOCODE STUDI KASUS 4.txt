@@ -1,0 +1,16 @@
+PSEUDOCODESTUDI KASUS 4
+NAMA : MAS HADI WIJAYA
+KELAS X PPLG
+
+ total
+if total >=100.000 AND total <=300.000 then
+	print (Selamat mendapat diskon 10%)
+	total = total - (total*0.1)
+else if total >=300.001 AND total <= 500.000 then
+	print (Selamat mendapat diskon 20%)
+	total = total - (total*0.2)
+else if total > 500.000 then
+	print (Selamat mendapat diskon 25%)
+	totoal = total - (total*0.25)
+endif
+print (total)

@@ -1,0 +1,15 @@
+PESEUDOCODE STUDI KASUS 2
+NAMA : MAS HADI WIJAYA
+KELAS : X PPLG
+
+for i=1 to 10
+	if i mod 2 == 1 then
+		print (i adalah ganjil)
+	else
+		print (i adalah genap)
+	endif
+endfor
+
+
+
+
