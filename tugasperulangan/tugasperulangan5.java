@@ -4,7 +4,7 @@ public class tugas5perulangan {
         
         // Loop untuk menampilkan bilangan ganjil
         for (int i = 1; i <= 100; i++) {
-            if (i % 2 != 0) { // Mengecek apakah i adalah bilangan ganjil
+            if (i % 2 != 0) { 
                 System.out.print(i + " ");
             }
         }
