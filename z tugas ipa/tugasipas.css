@@ -1,0 +1,73 @@
+header{
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 20px;
+}
+svg{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+}
+nav{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 20px;
+}
+h2{
+    text-align: center;
+    margin: 20px;
+}
+a {
+    text-decoration: none;
+    text-decoration-line: none;
+    color: black;
+}
+.baju, .kerudung, .rok, .seragam{
+    margin: 20px;
+    padding: 10px;
+}
+.baju{
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.kerudung{
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.rok{
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.seragam{
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+#carouselExample{
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.garis{
+    background-color: black;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    justify-content: center;
+}
+footer{
+    text-align: center;
+}
+.content :hover{
+    color: white;
+    background-color: black;
+    border: 2px white solid;
+    
+}

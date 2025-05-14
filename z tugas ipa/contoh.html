@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulir ke WhatsApp</title>
+</head>
+<body>
+  <form id="formulir">
+    <label>Nama:
+      <input type="text" name="nama" required>
+    </label><br><br>
+
+    <label>Email:
+      <input type="email" name="email" required>
+    </label><br><br>
+
+    <p>Jenis Kelamin:</p>
+    <label>
+      <input type="radio" name="gender" value="Pria" required>
+      Pria
+    </label>
+    <label>
+      <input type="radio" name="gender" value="Wanita">
+      Wanita
+    </label><br><br>
+
+    <label>Negara:
+      <select name="negara" required>
+        <option value="">--Pilih Negara--</option>
+        <option value="Indonesia">Indonesia</option>
+        <option value="Malaysia">Malaysia</option>
+        <option value="Singapura">Singapura</option>
+      </select>
+    </label><br><br>
+
+    <button type="submit">Kirim via WhatsApp</button>
+  </form>
+
+  <script>
+    document.getElementById('formulir').addEventListener('submit', function(e) {
+      e.preventDefault(); // Mencegah pengiriman form default
+
+      const nama = this.nama.value;
+      const email = this.email.value;
+      const gender = this.gender.value;
+      const negara = this.negara.value;
+
+      const pesan = `Halo, saya ingin mengirim data berikut:%0A
+Nama: ${nama}%0A
+Email: ${email}%0A
+Jenis Kelamin: ${gender}%0A
+Negara: ${negara}`;
+
+      const nomorWhatsApp = '6281234567890'; // Ganti dengan nomor WhatsApp Anda
+      const url = `https://wa.me/${nomorWhatsApp}?text=${pesan}`;
+
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>
