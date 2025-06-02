@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Sakit Sehat Sentosa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.hero-section {
+    background: url('https://unair.ac.id/wp-content/uploads/2023/08/Foto-by-Media-Perawat-Id.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    margin-top: -56px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: #FFC0CB !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background-color: #FFC0CB;
+    color: white;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.form-control, .form-select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+
+.btn:hover {
+    background-color: #FFC0CB;
+    color: white;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+section {
+    padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+}
+    </style>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #FFC0CB;">
+            <div class="container">
+                <a class="navbar-brand animate__animated animate__fadeInLeft" href="#">
+                    <i class="fas fa-hospital me-2"></i>Rumah Sakit Sehat Alhamduillah
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto animate__animated animate__fadeInRight">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home"><i class="fas fa-home me-1"></i> Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#doctors"><i class="fas fa-user-md me-1"></i> Dokter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#registration"><i class="fas fa-edit me-1"></i> Pendaftaran</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact"><i class="fas fa-phone me-1"></i> Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 text-center text-white animate__animated animate__zoomIn">
+                    <h1 class="display-4 fw-bold">Rumah Sakit Sehat Alhamduillah</h1>
+                    <p class="lead">Pelayanan Kesehatan Terbaik dengan Teknologi Modern</p>
+                    <a href="#registration" class="btn  btn-lg mt-3 pulse" style="background-color: #FFC0CB;">
+                        <i class="fas fa-calendar-check me-2"></i>Daftar Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="doctors" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="fw-bold " style="color: #FFC0CB;">Jadwal Praktik Dokter</h2>
+                    <p class="text-muted">Berikut adalah jadwal praktik dokter kami</p>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="table-responsive animate__animated animate__fadeInUp">
+                        <table class="table table-striped table-hover shadow">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama Dokter</th>
+                                    <th>Spesialis</th>
+                                    <th>Hari Praktik</th>
+                                    <th>Jam Praktik</th>
+                                    <th>Ruangan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Dr. Muhammad Suparto, Sp.PD</td>
+                                    <td>Penyakit Dalam</td>
+                                    <td>Senin - Jumat</td>
+                                    <td>08:00 - 14:00</td>
+                                    <td>A101</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Dr. Ayu Permata Sari, Sp.OG</td>
+                                    <td>Kandungan</td>
+                                    <td>Senin, Rabu, Jumat</td>
+                                    <td>10:00 - 15:00</td>
+                                    <td>B205</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Dr. Yudi Setiawan, Sp.A</td>
+                                    <td>Anak</td>
+                                    <td>Selasa - Kamis</td>
+                                    <td>09:00 - 16:00</td>
+                                    <td>C301</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Dr. Agus Arif Wijaya, Sp.KK</td>
+                                    <td>Kulit dan Kelamin</td>
+                                    <td>Senin - Sabtu</td>
+                                    <td>13:00 - 20:00</td>
+                                    <td>D102</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Dr. Taufiq Hidayat, Sp.B</td>
+                                    <td>Bedah Umum</td>
+                                    <td>Rabu - Jumat</td>
+                                    <td>08:00 - 12:00</td>
+                                    <td>E201</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="registration" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="fw-bold " style="color: #FFC0CB;">Form Pendaftaran Pasien</h2>
+                    <p class="text-muted">Silahkan isi form berikut untuk mendaftar</p>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center animate__animated animate__fadeIn">
+                <div class="col-lg-8">
+                    <div class="card shadow">
+                        <div class="card-body p-4">
+                            <form id="patientForm" method="POST" action="">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="fullName" class="form-label">Nama Lengkap</label>
+                                        <input type="text" class="form-control" id="fullName" name="fullName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="nik" class="form-label">NIK</label>
+                                        <input type="text" class="form-control" id="nik" name="nik" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="birthDate" class="form-label">Tanggal Lahir</label>
+                                        <input type="date" class="form-control" id="birthDate" name="birthDate" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="gender" class="form-label">Jenis Kelamin</label>
+                                        <select class="form-select" id="gender" name="gender" required>
+                                            <option value="" selected disabled>Pilih Jenis Kelamin</option>
+                                            <option value="Laki-laki">Laki-laki</option>
+                                            <option value="Perempuan">Perempuan</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="address" class="form-label">Alamat</label>
+                                    <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone" class="form-label">No. Telepon</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="doctor" class="form-label">Pilih Dokter</label>
+                                        <select class="form-select" id="doctor" name="doctor" required>
+                                            <option value="" selected disabled>Pilih Dokter</option>
+                                            <option value="Dr. Muhammad Suparto, Sp.PD">Dr. Muhammad Suparto, Sp.PD</option>
+                                            <option value="Dr. Ayu Permatasari, Sp.OG">Dr. Ayu Permatasari, Sp.OG</option>
+                                            <option value="Dr. Yudi Setiawan, Sp.A">Dr. Yudi Setiawan, Sp.A</option>
+                                            <option value="Dr. Agus Arif Wijaya, Sp.KK">Dr. Agus Arif Wijaya, Sp.KK</option>
+                                            <option value="Dr. Taufiq Hidayat, Sp.B">Dr. Taufiq Hidayat, Sp.B</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="appointmentDate" class="form-label">Tanggal Janji Temu</label>
+                                        <input type="date" class="form-control" id="appointmentDate" name="appointmentDate" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="complaint" class="form-label">Keluhan</label>
+                                    <textarea class="form-control" id="complaint" name="complaint" rows="3" required></textarea>
+                                </div>
+                                
+                                <div class="d-grid">
+                                    <button type="submit" class="btn  btn-lg" style="background-color: #FFC0CB;">
+                                        <i class="fas fa-paper-plane me-2"></i>Kirim Pendaftaran
+                                    </button>
+                                </div>
+                            </form>
+                            
+                            <div id="registrationResult" class="mt-4 d-none">
+                                <div class="alert alert-success animate__animated animate__fadeIn">
+                                    <h4 class="alert-heading"><i class="fas fa-check-circle me-2"></i>Pendaftaran Berhasil!</h4>
+                                    <p id="resultMessage"></p>
+                                    <hr>
+                                    <p class="mb-0">Silahkan datang ke rumah sakit 30 menit sebelum jadwal janji temu dengan membawa KTP asli.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="fw-bold " style="color: #FFC0CB;">Hubungi Kami</h2>
+                    <p class="text-muted">Kami siap melayani Anda 24 jam</p>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-4 mb-4 mb-lg-0 animate__animated animate__fadeInLeft">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-map-marker-alt fa-3x  mb-3" style="color: #FFC0CB;"></i>
+                            <h5 class="card-title">Alamat</h5>
+                            <p class="card-text">Jl. Kesehatan No. 123<br>Jakarta Pusat, 10110</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4 mb-lg-0 animate__animated animate__fadeInUp">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-phone-alt fa-3x  mb-3" style="color: #FFC0CB;"></i>
+                            <h5 class="card-title">Telepon</h5>
+                            <p class="card-text">
+                                <a href="tel:+622112345678">(021) 1234-5678</a><br>
+                                <a href="tel:+6281234567890">0812-3456-7890</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 animate__animated animate__fadeInRight">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-envelope fa-3x  mb-3" style="color: #FFC0CB;"></i>
+                            <h5 class="card-title">Email</h5>
+                            <p class="card-text">
+                                <a href="mailto:mashadi@gmail.com">mashadi@gmail.com</a><br>
+                                <a href="mailto:pendaftaran@sehatalhamduillah.com">pendaftaran@sehatalhamduillah.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Rumah Sakit Sehat Alhamduillah</h5>
+                    <p>Memberikan pelayanan kesehatan terbaik dengan fasilitas modern dan tenaga medis profesional.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Jam Operasional</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Senin - Jumat: 08:00 - 21:00</li>
+                        <li class="mb-2">Sabtu: 08:00 - 17:00</li>
+                        <li>Minggu: 09:00 - 15:00</li>
+                        <li class="mt-3">IGD: 24 Jam</li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Navigasi Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white text-decoration-none">Beranda</a></li>
+                        <li class="mb-2"><a href="#doctors" class="text-white text-decoration-none">Jadwal Dokter</a></li>
+                        <li class="mb-2"><a href="#registration" class="text-white text-decoration-none">Pendaftaran</a></li>
+                        <li><a href="#contact" class="text-white text-decoration-none">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy;Rumah Sakit Sehat Alhamduillah. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#home" class="btn  back-to-top animate__animated animate__fadeInUp" style="color: #FFC0CB;">
+        <i class="fas fa-arrow-up" style="color: white;"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+            $('.navbar').addClass('scrolled');
+        } else {
+            $('.navbar').removeClass('scrolled');
+        }
+        
+        if ($(this).scrollTop() > 300) {
+            $('.back-to-top').addClass('active');
+        } else {
+            $('.back-to-top').removeClass('active');
+        }
+    });
+    
+    $('a[href*="#"]').on('click', function(e) {
+        e.preventDefault();
+        
+        $('html, body').animate(
+            {
+                scrollTop: $($(this).attr('href')).offset().top - 70,
+            },
+            500,
+            'linear'
+        );
+    });
+    
+    $('.back-to-top').click(function() {
+        $('html, body').animate({scrollTop: 0}, 'slow');
+        return false;
+    });
+    
+    $('#patientForm').submit(function(e) {
+        e.preventDefault();
+        
+        setTimeout(function() {
+            const fullName = $('#fullName').val();
+            const doctor = $('#doctor').val();
+            const appointmentDate = $('#appointmentDate').val();
+            
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = new Date(appointmentDate).toLocaleDateString('id-ID', options);
+            
+            const message = `Terima kasih, ${fullName}! Anda telah terdaftar untuk konsultasi dengan ${doctor} pada ${formattedDate}.`;
+            
+            $('#resultMessage').text(message);
+            $('#registrationResult').removeClass('d-none');
+            
+            $('html, body').animate({
+                scrollTop: $('#registrationResult').offset().top - 100
+            }, 500);
+            
+            $('#patientForm')[0].reset();
+        }, 1000);
+    });
+    
+    const animateOnScroll = function() {
+        const windowTop = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        const windowBottom = windowTop + windowHeight;
+        
+        $('.animate__animated').each(function() {
+            const elementTop = $(this).offset().top;
+            const elementHeight = $(this).outerHeight();
+            const elementBottom = elementTop + elementHeight;
+            
+            if (elementBottom >= windowTop && elementTop <= windowBottom) {
+                if (!$(this).hasClass('animate__fadeInUp') && !$(this).hasClass('animate__fadeInLeft') && 
+                    !$(this).hasClass('animate__fadeInRight') && !$(this).hasClass('animate__zoomIn') && 
+                    !$(this).hasClass('animate__fadeIn')) {
+                    $(this).addClass('animate__fadeInUp');
+                }
+            }
+        });
+    };
+    
+    animateOnScroll();
+    $(window).scroll(animateOnScroll);
+});
+
+    </script>
+</body>
+</html>
