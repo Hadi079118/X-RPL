@@ -1,0 +1,71 @@
+:root {
+--untukFont: rgb(160, 247, 247);
+}
+
+
+
+* {
+    padding: 0px;
+    
+}
+
+.pertama {
+    float: right;
+    margin: 0px;
+    justify-content: center;
+    font-size: larger;
+    padding: 20px;
+    padding-bottom: 225px;
+    background-color: rgb(160, 247, 247);
+    
+}  
+
+form {
+    background-color: rgb(160, 247, 247);
+}
+
+.atas {
+    background-color: rgb(120, 212, 233);
+    height: 160px;
+}
+
+/* button */
+.tombol {
+    background-color: rgb(145, 204, 240);
+    border: 5px;
+    display: flex;
+    
+}
+
+.kedua {
+    color: blue;
+    width: 1168px;
+    height: 716px;
+    background-color: rgb(206, 235, 251);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.nav ul li {
+    display: flex;
+    align-items: center;
+    font-weight: 200;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+    
