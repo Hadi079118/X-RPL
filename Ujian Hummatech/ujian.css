@@ -1,0 +1,49 @@
+*{
+    font-family: "poppins";
+    font-size: x-small;
+    margin: 0;
+}
+header{
+    display: flex;
+    padding: 5px;
+    background-color: whitesmoke;
+    
+}
+h2{
+    padding-top: 8px;
+    padding-left: 5px;
+}
+i{
+    font-size: x-large;
+    color: #4cbb17;
+}
+li{
+    list-style-type: none;
+}
+menu {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    gap: 20px;
+    padding-top: 15px;
+    margin-left: 150px;
+}
+
+.polis{
+    background-color: #00c024;
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: -5px;
+    color: white;
+    
+}
+.informasi {
+    margin: 5em;
+    
+}
+.informasi p{
+    text-align:justify;
+}
+.pas {
+    justify-content: right;
+}
